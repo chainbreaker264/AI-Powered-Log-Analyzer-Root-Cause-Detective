@@ -1,0 +1,44 @@
+# Maven
+target/
+*.jar
+*.war
+*.ear
+.m2/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# Build output
+output/
+build/
+dist/
+*.class
+
+# IDE
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Runtime
+application.properties.local
+*.pid
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.swp
+*.swo
+*~
+.tmp/

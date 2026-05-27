@@ -1,0 +1,31 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: log-analyzer
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: log-analyzer-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+anthropic:
+  api-key: ${ANTHROPIC_API_KEY}
+  endpoint: https://api.anthropic.com/v1/messages
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
